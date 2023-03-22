@@ -19,14 +19,16 @@ body {
     padding: 0px 10%;
 }
 .nav {
-    padding-top: 20px;
+    padding-top: 40px;
     padding-bottom: 20px;
-    border-bottom: 1px solid #ddd;
 }
 nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+.mobileToggle, .mobileCart {
+    display: none;
 }
 .logo h3 {
     font-size: 24px;
@@ -99,8 +101,13 @@ nav {
 .logoImages {
     display: flex;
     justify-content: space-between;
-    padding: 43px 0px;  
+    padding: 43px 0px;
+    flex-wrap: wrap;
+    align-items: center;
+    row-gap: 50px;
+    column-gap: 50px;
 }
+
 
 /* ---------------------------------------
             Products Card Styles
@@ -117,8 +124,8 @@ nav {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     justify-content: space-between;
-    column-gap: 30px;
-    row-gap: 30px;
+    column-gap: 40px;
+    row-gap: 40px;
 }
 .popularProduct {
     background: #FFFFFF;
@@ -171,6 +178,7 @@ nav {
 .featuredTitle {
     font-size: 38px;
     font-weight: 700;
+    line-height: 58px;
 }
 .featuredImage img {
     width: 100%;
@@ -219,4 +227,67 @@ footer {
 .socialMenu li a {
     color: #fff;
     line-height: 244%;
+}
+
+/* ---------------------------------------------------
+                Responsive Media Queires
+---------------------------------------------------- */
+
+@media only screen and (max-width: 768px){
+    .container {
+        padding: 0px 10px;
+        text-align: center;
+    }
+    .nav {
+        padding-top: 40px;
+    }
+    .heroArea {
+        padding-top: 50px;
+    }
+    .dFlex {
+        flex-direction: column-reverse;
+        row-gap: 60px;
+    }
+    .w50 {
+        width: 100%;
+        text-align: center;
+    }
+    .clientsLogoArea {
+        margin: 50px 0px;
+    }
+    
+    .popularProducts {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .popularProduct {
+        text-align: left;
+    }
+    footer {
+        margin-top: 50px;
+    }
+}
+@media only screen and (max-width: 992px){
+    .popularProducts {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media only screen and (max-width: 1159px){
+    .logoImages {
+        justify-content: center;
+    }
+}
+/* ------------------------------------------------
+            Mobile Menu 
+------------------------------------------------ */
+@media only screen and (max-width: 809px) {
+    .mobileCart, .mobileToggle {
+        display: block;
+    }
+    .nav-menu {
+        display: none;
+    }
+    .nav {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
 }
