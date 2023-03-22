@@ -58,8 +58,7 @@ nav {
     align-items: center;
 }
 .w50 {
-    width: 46%;
-    margin: 2% 0;
+    width: 50%;
 }
 .heroHeading {
     font-size: 52px;
@@ -243,6 +242,9 @@ footer {
     }
     .heroArea {
         padding-top: 50px;
+    }
+    .heroImage img {
+        width: 100%;
     }
     .dFlex {
         flex-direction: column-reverse;
